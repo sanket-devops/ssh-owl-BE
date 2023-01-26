@@ -10,12 +10,12 @@ incomes = [
 def get_incomes():
     return jsonify(incomes)
 
-@app.route('/incomes', methods=['POST'])
-def add_income():
-    incomes.append(request.get_json())
-    return '', 204
+@app.route('/ssh', methods=['POST'])
+def ssh_connection():
+    reqData = request.json
+    return ssh_conn(reqData["host"], reqData["username"], reqData["password"], reqData["commandsArr"]),200
 
 @app.route("/")
-def hello_world():
+def get_server():
     # sys.exit()
-    return ssh_conn()
+    return "Server is running...",200

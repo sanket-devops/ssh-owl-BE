@@ -1,13 +1,13 @@
 import paramiko
 import sys
 
-def ssh_conn():
-    hostName = "192.168.120.191"
-    hostUser = "prod-proxy"
-    hostPass = "Yxorp$11-Jan-2023%dorP"
+def ssh_conn(host, username, password, commandsArr):
+    hostName = host
+    hostUser = username
+    hostPass = password
+    commands = commandsArr
     results = []
 
-    commands = ["cat /etc/hostname", "ip add | grep '192.168'", "cat /home/prod-proxy/temp.txt"]
     client = paramiko.SSHClient()
     client.load_system_host_keys()
     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
