@@ -19,5 +19,5 @@ def ssh_conn(host, username, password, commandsArr):
             nRemove = line.strip('\n')
             temp.append(nRemove)
         results.append(temp)
-    print(results)
+    print("Host: ", hostName,"\nData: ", results)
     return results
