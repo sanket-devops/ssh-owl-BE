@@ -1,7 +1,7 @@
 import paramiko
 import sys
 
-def ssh_conn(host, username, password, commandsArr):
+async def ssh_conn(host, username, password, commandsArr):
     hostName = host
     hostUser = username
     hostPass = password

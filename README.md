@@ -13,9 +13,11 @@ pipenv shell
 pipenv install
 # pipenv install --ignore-pipfile     # Install dependency from Pipfile.lock
 ```
-### Start server
+### Start any one server 
 ```shell
-sh start.sh
+sh start-main-fastapi.sh  # localhost:8000
+# OR
+sh start-main-flask.sh  # localhost:5000
 ```
 
 ### Post api configuration
